@@ -1,0 +1,19 @@
+{
+  "name": "screen-share",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "ws": "^8.22.0"
+  }
+}
+// TOKEN = 7e528762018a4b02ddf5301958ae1d7c8c18ca00b9a58b14

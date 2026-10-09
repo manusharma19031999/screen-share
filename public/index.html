@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <body
+    style="margin: 0; background: #000; display: flex; justify-content: center"
+  >
+    <img id="s" style="max-height: 100vh" />
+    <script>
+      const token = new URLSearchParams(location.search).get("token");
+      const proto = location.protocol === "https:" ? "wss://" : "ws://";
+      const ws = new WebSocket(
+        `${proto}${location.host}/?role=viewer&token=${token}`,
+      );
+      ws.onmessage = (e) => {
+        const url = URL.createObjectURL(e.data);
+        s.onload = () => URL.revokeObjectURL(url);
+        s.src = url;
+      };
+    </script>
+  </body>
+</html>
